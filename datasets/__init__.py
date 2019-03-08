@@ -2,8 +2,4 @@
 #''''
 #from .NAME_OF_FILE import CLASS_FOR_DATA
 #''''
-from .sklearn_digits import sklearnDigits
-from .sklearn_20newsgroups import sklearnNewsGroup
-from .emnist import EmnistDataset
-from .emnist_lines import EmnistLinesDataset
-from .iam_lines import IamLinesDataset
+from .sentiment140_character_level import Sentiment140CharacterLevel

@@ -1,0 +1,27 @@
+#Ignore files
+.nohup.out
+.Untitled.ipynb
+.experiments.ipynb
+.DS_Store
+.index.py~
+
+#Data
+/data/
+/weights/
+/wandb/
+
+#pycache
+__pycache__
+.ipybn_checkpoints
+/algorithms/__pycache__
+/datasets/.ipybn_checkpoints
+/test/.ipybn_checkpoints
+.ftpconfig
+*.ipynb
+*.out
+*.out
+
+#Files
+fasttext.json
+sentiment.json
+wandb-debug.log

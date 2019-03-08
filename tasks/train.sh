@@ -1,2 +1,2 @@
 #!/bin/sh
-pipenv run python run_experiment.py --gpu=-1 --save '{"dataset": "EmnistDataset", "model": "EmnistModel", "algorithm": "lenet", "train_args": {"epochs": 8}}'
+python3.6 run_experiment.py --gpu=-1 '{"dataset": "Sentiment140CharacterLevel", "model": "Sentiment140Model", "algorithm": "lstm_cnn_chars", "algorithm_args": {"dropout": 0.25}, "train_args": {"epochs": 100, "lr":	0.01}}'

@@ -153,3 +153,102 @@
 [I 13:53:17.536 NotebookApp] 302 GET /tree? (146.169.167.191) 1.03ms
 [I 13:53:21.198 NotebookApp] 302 POST /login?next=%2Ftree%3F (146.169.167.191) 1.68ms
 [I 13:54:33.166 NotebookApp] 302 GET /tree? (146.169.167.191) 0.75ms
+[I 14:06:17.862 NotebookApp] Creating new file in 
+[I 14:06:33.323 NotebookApp] Creating new file in 
+[W 14:08:55.740 NotebookApp] delete /algorithms/ctc.py
+[W 14:08:55.741 NotebookApp] Skipping trash for /sentiment/algorithms/ctc.py, on different device to home directory
+[W 14:08:55.744 NotebookApp] delete /algorithms/lenet.py
+[W 14:08:55.744 NotebookApp] Skipping trash for /sentiment/algorithms/lenet.py, on different device to home directory
+[W 14:08:55.747 NotebookApp] delete /algorithms/lenet_cnn_all_conv.py
+[W 14:08:55.747 NotebookApp] Skipping trash for /sentiment/algorithms/lenet_cnn_all_conv.py, on different device to home directory
+[W 14:08:55.749 NotebookApp] delete /algorithms/lenet_sliding_windows.py
+[W 14:08:55.749 NotebookApp] Skipping trash for /sentiment/algorithms/lenet_sliding_windows.py, on different device to home directory
+[W 14:08:55.752 NotebookApp] delete /algorithms/line_lstm_ctc.py
+[W 14:08:55.753 NotebookApp] Skipping trash for /sentiment/algorithms/line_lstm_ctc.py, on different device to home directory
+[W 14:08:55.754 NotebookApp] delete /algorithms/line_lstm.py
+[W 14:08:55.754 NotebookApp] Skipping trash for /sentiment/algorithms/line_lstm.py, on different device to home directory
+[W 14:08:55.756 NotebookApp] delete /algorithms/svm.py
+[W 14:08:55.756 NotebookApp] Skipping trash for /sentiment/algorithms/svm.py, on different device to home directory
+[W 14:09:03.797 NotebookApp] delete /data/processed
+[W 14:09:24.243 NotebookApp] delete /datasets/emnist.py
+[W 14:09:24.243 NotebookApp] Skipping trash for /sentiment/datasets/emnist.py, on different device to home directory
+[W 14:09:24.246 NotebookApp] delete /datasets/emnist_lines.py
+[W 14:09:24.246 NotebookApp] Skipping trash for /sentiment/datasets/emnist_lines.py, on different device to home directory
+[W 14:09:24.248 NotebookApp] delete /datasets/sentences.py
+[W 14:09:24.248 NotebookApp] Skipping trash for /sentiment/datasets/sentences.py, on different device to home directory
+[W 14:09:24.250 NotebookApp] delete /datasets/iam_lines.py
+[W 14:09:24.250 NotebookApp] Skipping trash for /sentiment/datasets/iam_lines.py, on different device to home directory
+[W 14:09:24.252 NotebookApp] delete /datasets/sklearn_20newsgroups.py
+[W 14:09:24.252 NotebookApp] Skipping trash for /sentiment/datasets/sklearn_20newsgroups.py, on different device to home directory
+[W 14:09:24.254 NotebookApp] delete /datasets/sklearn_digits.py
+[W 14:09:24.254 NotebookApp] Skipping trash for /sentiment/datasets/sklearn_digits.py, on different device to home directory
+[W 14:09:45.848 NotebookApp] delete /models/emnist_model.py
+[W 14:09:45.849 NotebookApp] Skipping trash for /sentiment/models/emnist_model.py, on different device to home directory
+[W 14:09:45.852 NotebookApp] delete /models/emnist_sklearn_model.py
+[W 14:09:45.852 NotebookApp] Skipping trash for /sentiment/models/emnist_sklearn_model.py, on different device to home directory
+[W 14:09:45.854 NotebookApp] delete /models/line_model.py
+[W 14:09:45.854 NotebookApp] Skipping trash for /sentiment/models/line_model.py, on different device to home directory
+[W 14:09:45.857 NotebookApp] delete /models/line_model_ctc.py
+[W 14:09:45.857 NotebookApp] Skipping trash for /sentiment/models/line_model_ctc.py, on different device to home directory
+[W 14:10:17.611 NotebookApp] delete /weights/EmnistModel_EmnistDataset_lenet_weights.h5
+[W 14:10:17.612 NotebookApp] Skipping trash for /sentiment/weights/EmnistModel_EmnistDataset_lenet_weights.h5, on different device to home directory
+[W 14:10:17.615 NotebookApp] delete /weights/SVMModel_sklearnDigitsSVM_weights.pkl
+[W 14:10:17.615 NotebookApp] Skipping trash for /sentiment/weights/SVMModel_sklearnDigitsSVM_weights.pkl, on different device to home directory
+[W 14:10:35.222 NotebookApp] delete /emnist_essentials.json
+[W 14:10:35.222 NotebookApp] Skipping trash for /sentiment/emnist_essentials.json, on different device to home directory
+[W 14:10:35.224 NotebookApp] delete /emnist_predictor.py
+[W 14:10:35.224 NotebookApp] Skipping trash for /sentiment/emnist_predictor.py, on different device to home directory
+[I 14:13:54.753 NotebookApp] Creating new file in 
+[I 14:15:23.071 NotebookApp] Creating new file in /datasets
+[I 14:18:46.515 NotebookApp] Creating new directory in 
+[I 14:19:16.401 NotebookApp] Creating new file in 
+[I 14:37:40.075 NotebookApp] Creating new notebook in 
+[I 14:37:40.109 NotebookApp] Writing notebook-signing key to /root/.local/share/jupyter/notebook_secret
+[I 14:37:41.289 NotebookApp] Kernel started: a1d20d6e-3806-48e6-982e-233aec46c6f7
+[I 14:37:41.651 NotebookApp] Adapting to protocol v5.1 for kernel a1d20d6e-3806-48e6-982e-233aec46c6f7
+[I 14:39:02.863 NotebookApp] Saving file at /prototyping.ipynb
+[I 14:39:41.308 NotebookApp] Saving file at /prototyping.ipynb
+[I 14:41:30.067 NotebookApp] Saving file at /prototyping.ipynb
+[I 14:41:32.537 NotebookApp] Starting buffering for a1d20d6e-3806-48e6-982e-233aec46c6f7:3cbf217517a94a7bb9e4292e8a75e604
+[I 14:41:36.966 NotebookApp] Kernel shutdown: a1d20d6e-3806-48e6-982e-233aec46c6f7
+[I 14:41:38.925 NotebookApp] Kernel started: 9f122002-7128-47e9-9a22-86ce9402ca1b
+[I 14:41:39.297 NotebookApp] Adapting to protocol v5.1 for kernel 9f122002-7128-47e9-9a22-86ce9402ca1b
+[I 14:43:38.950 NotebookApp] Saving file at /prototyping.ipynb
+[I 14:47:39.719 NotebookApp] Saving file at /prototyping.ipynb
+[W 14:47:42.014 NotebookApp] delete /utils.py
+[W 14:47:42.015 NotebookApp] Skipping trash for /sentiment/utils.py, on different device to home directory
+[I 14:49:39.056 NotebookApp] Saving file at /prototyping.ipynb
+[I 14:50:35.743 NotebookApp] Starting buffering for 9f122002-7128-47e9-9a22-86ce9402ca1b:68df28dfd1a54ff3bf81eff8b4a79ec7
+[I 14:50:36.254 NotebookApp] Kernel restarted: 9f122002-7128-47e9-9a22-86ce9402ca1b
+[I 14:50:36.339 NotebookApp] Adapting to protocol v5.1 for kernel 9f122002-7128-47e9-9a22-86ce9402ca1b
+[I 14:50:36.340 NotebookApp] Restoring connection for 9f122002-7128-47e9-9a22-86ce9402ca1b:68df28dfd1a54ff3bf81eff8b4a79ec7
+[I 14:50:36.340 NotebookApp] Replaying 7 buffered messages
+[I 14:51:38.992 NotebookApp] Saving file at /prototyping.ipynb
+[W 15:09:22.196 NotebookApp] delete /algorithms/utils.py
+[W 15:09:22.197 NotebookApp] Skipping trash for /sentiment/algorithms/utils.py, on different device to home directory
+[I 15:09:25.986 NotebookApp] Creating new file in /algorithms
+[I 15:37:27.970 NotebookApp] Creating new file in /models
+[I 16:05:40.159 NotebookApp] Saving file at /prototyping.ipynb
+[I 16:05:51.964 NotebookApp] Saving file at /prototyping.ipynb
+[I 16:06:28.626 NotebookApp] Saving file at /prototyping.ipynb
+[I 16:06:31.544 NotebookApp] Starting buffering for 9f122002-7128-47e9-9a22-86ce9402ca1b:68df28dfd1a54ff3bf81eff8b4a79ec7
+[I 16:06:38.441 NotebookApp] Kernel shutdown: 9f122002-7128-47e9-9a22-86ce9402ca1b
+[I 16:06:40.085 NotebookApp] Kernel started: 24fddd50-abfb-404b-9315-f3addb6a5ff8
+[I 16:06:40.459 NotebookApp] Adapting to protocol v5.1 for kernel 24fddd50-abfb-404b-9315-f3addb6a5ff8
+[I 16:07:01.178 NotebookApp] Starting buffering for 24fddd50-abfb-404b-9315-f3addb6a5ff8:803d6e4173d34b0bb37642e6ed8bd19b
+[I 16:07:01.495 NotebookApp] Kernel restarted: 24fddd50-abfb-404b-9315-f3addb6a5ff8
+[I 16:07:01.513 NotebookApp] Adapting to protocol v5.1 for kernel 24fddd50-abfb-404b-9315-f3addb6a5ff8
+[I 16:07:01.514 NotebookApp] Restoring connection for 24fddd50-abfb-404b-9315-f3addb6a5ff8:803d6e4173d34b0bb37642e6ed8bd19b
+[I 16:07:01.514 NotebookApp] Replaying 7 buffered messages
+[I 16:07:35.728 NotebookApp] Saving file at /prototyping.ipynb
+[I 16:07:39.836 NotebookApp] Starting buffering for 24fddd50-abfb-404b-9315-f3addb6a5ff8:803d6e4173d34b0bb37642e6ed8bd19b
+[I 16:07:47.059 NotebookApp] Kernel shutdown: 24fddd50-abfb-404b-9315-f3addb6a5ff8
+[W 16:07:47.062 NotebookApp] delete /prototyping.ipynb
+[W 16:07:47.062 NotebookApp] Skipping trash for /sentiment/prototyping.ipynb, on different device to home directory
+[I 16:07:48.795 NotebookApp] Creating new notebook in 
+[I 16:07:49.758 NotebookApp] Kernel started: f3c0e89a-676e-4dbe-8c5d-d3abfb5f4bd5
+[I 16:07:50.145 NotebookApp] Adapting to protocol v5.1 for kernel f3c0e89a-676e-4dbe-8c5d-d3abfb5f4bd5
+[W 16:09:27.676 NotebookApp] delete /data/processed/sentiment140/data_sentiment140_character_level.h5
+[W 16:09:27.676 NotebookApp] Skipping trash for /sentiment/data/processed/sentiment140/data_sentiment140_character_level.h5, on different device to home directory
+[I 16:09:50.009 NotebookApp] Saving file at /Untitled.ipynb
+[I 16:48:22.546 NotebookApp] Starting buffering for f3c0e89a-676e-4dbe-8c5d-d3abfb5f4bd5:3dbf3a06037f40389e75a0e5fbb0ffa1
