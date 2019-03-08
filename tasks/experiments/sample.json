@@ -1,0 +1,29 @@
+{
+    "experiment_group": "Sample Experiments",
+    "experiments": [
+        {
+            "dataset": "EmnistDataset",
+            "model": "EmnistModel",
+            "algorithm": "lenet",
+            "train_args": {
+                "epochs": 1
+            }
+        },
+        {
+            "dataset": "EmnistDataset",
+            "model": "EmnistModel",
+            "algorithm": "lenet",
+            "train_args": {
+                "epochs": 1
+            }
+        },
+        {
+            "dataset": "EmnistDataset",
+            "model": "EmnistModel",
+            "algorithm": "lenet",
+            "train_args": {
+                "epochs": 2
+            }
+        }
+    ]
+}
