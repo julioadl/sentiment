@@ -1,19 +1,18 @@
-from typing import Tuple, Union
+from typing import List, Tuple, Union
 
 import numpy as np
+import json
 
-from models import SVMModel
+from models import Sentiment140Model
+from utils.preprocess_tokenize_by_char import vectorizer
+from datasets.base import Dataset
 
 class predictor:
     def __init__(self):
-        self.model = SVMModel()
-        self.model.load_model()
+        self.model = Sentiment140Model()
+        self.model.load_weights()
 
-    def predict(self, data_or_filename: Union[np.ndarray, str]) -> Tuple[str, float]:
-        if isinstance(data_or_filename, str):
-            #write util to retrieve data from url and convert it to numpy ndarray
-            #Substitute the line below
-            data = 'data'
-        else:
-            data = data_or_filename
-        return self.model.predict(data)
+    def predict(self, text: List[str]) -> Tuple[str, float, List]:
+        textMatrix = vectorizer(text, self.model.features)
+        pred = self.model.predict(embeddingMatrix)
+        return pred

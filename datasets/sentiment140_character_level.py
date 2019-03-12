@@ -15,6 +15,7 @@ import h5py
 import numpy as np
 import pandas as pd
 from sklearn import preprocessing
+from sklearn.externals import joblib
 from tensorflow.keras.utils import to_categorical
 from collections import Counter
 
@@ -31,6 +32,7 @@ PROCESSED_DATA_DIRNAME = Dataset.data_dirname() / 'processed' / 'sentiment140'
 PROCESSED_DATA_FILENAME = PROCESSED_DATA_DIRNAME / 'data_sentiment140_character_level.h5'
 RAW_ESSENTIALS_PATH = Dataset.data_dirname() / 'raw' / 'essentials'
 PROCESSED_ESSENTIALS_PATH = Dataset.data_dirname() / 'processed' / 'essentials'
+ESSENTIALS_DATA_FILENAME = PROCESSED_ESSENTIALS_PATH / 'features_character_level.json'
 
 def _download_data():
 
@@ -75,7 +77,7 @@ def _process_data():
         df = df.dropna()
         df.columns = ['polarity', 'id', 'date', 'query', 'user_screen_name', 'text']
         df = df.drop(columns=['id', 'date', 'query', 'user_screen_name'])
-        df = df.sample(50000, random_state=42)
+        #df = df.sample(100000, random_state=42)
         #Drop Nulls
         #Notice these columns come from reading the documentation at:
         #http://help.sentiment140.com/for-students
@@ -108,6 +110,9 @@ def _process_data():
             f.create_dataset('y_train', data=y_train, compression='lzf')
             f.create_dataset('X_test', data=X_test, compression='lzf')
             f.create_dataset('y_test', data=y_test, compression='lzf')
+
+        with open(ESSENTIALS_DATA_FILENAME, 'w') as f:
+            json.dump(features, f)
 
         print('Done')
 
@@ -142,6 +147,8 @@ class Sentiment140CharacterLevel(Dataset):
             self.y_train = f['y_train'][:]
             self.x_test = f['X_test'][:]
             self.y_test = f['y_test'][:]
+
+        self.features = json.load(open(ESSENTIALS_DATA_FILENAME))
 
         self.input_shape = self.x_train.shape[1:]
         self.output_shape = self.y_train.shape[1:]

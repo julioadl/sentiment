@@ -6,12 +6,12 @@ from tensorflow.keras.models import load_model
 
 from .base import ModelTf as Model
 from datasets.sentiment140_character_level import Sentiment140CharacterLevel
-from algorithms.lstm_cnn_chars import lstm_cnn_chars
+from algorithms.lstm_chars import lstm_chars
 
 DIRNAME = pathlib.Path('__file__').parents[0].resolve() / 'weights'
 
 class Sentiment140Model(Model):
-    def __init__(self, dataset_cls: type=Sentiment140CharacterLevel, algorithm_fn: Callable=lstm_cnn_chars, dataset_args: Dict=None, algorithm_args: Dict=None):
+    def __init__(self, dataset_cls: type=Sentiment140CharacterLevel, algorithm_fn: Callable=lstm_chars, dataset_args: Dict=None, algorithm_args: Dict=None):
         super().__init__(dataset_cls, algorithm_fn, dataset_args, algorithm_args)
 
     def predict(self, text_as_embedding: np.ndarray) -> Tuple[str, float]:
