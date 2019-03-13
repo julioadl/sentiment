@@ -46,7 +46,7 @@ def run_experiment(experiment_config: Dict, save_weights: bool, gpu_ind:int,
     dataset_cls = getattr(datasets_module, experiment_config['dataset'])
     dataset_args = experiment_config.get('dataset_args', {})
     dataset = dataset_cls(**dataset_args)
-    dataset.load_or_generate_data()
+    #dataset.load_or_generate_data()
     print(dataset)
 
     models_module = importlib.import_module('models')

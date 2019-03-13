@@ -11,8 +11,9 @@ class predictor:
     def __init__(self):
         self.model = Sentiment140Model()
         self.model.load_weights()
+        self.features = self.model.load_features()
 
     def predict(self, text: List[str]) -> Tuple[str, float, List]:
-        textMatrix = vectorizer(text, self.model.features)
-        pred = self.model.predict(embeddingMatrix)
+        textMatrix, _, _ = vectorizer(text, self.features)
+        pred = self.model.predict(textMatrix)
         return pred

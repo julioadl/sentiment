@@ -38,7 +38,6 @@ def _generateIndexes(text: List['str']):
     nVoc = len(vocabulary)
     indices = range(1, nVoc + 1)
     vocabularyDict = dict(zip(vocabulary, indices))
-    print(len(vocabularyDict))
     inverseVocabularyDict = dict(zip(indices, vocabulary))
     return vocabularyDict
 
