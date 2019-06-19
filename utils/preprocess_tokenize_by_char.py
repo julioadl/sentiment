@@ -41,7 +41,7 @@ def _generateIndexes(text: List['str']):
     inverseVocabularyDict = dict(zip(indices, vocabulary))
     return vocabularyDict
 
-def _generateIndexArray(text: List['str'], features: Dict, max_length_str: int=120):
+def _generateIndexArray(text: List['str'], features: Dict, max_length_str: int=240):
     noRows = len(text)
     X = np.zeros((noRows, max_length_str))
     for i in range(noRows):

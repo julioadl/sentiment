@@ -77,7 +77,7 @@ def _process_data():
         df = df.dropna()
         df.columns = ['polarity', 'id', 'date', 'query', 'user_screen_name', 'text']
         df = df.drop(columns=['id', 'date', 'query', 'user_screen_name'])
-        #df = df.sample(100000, random_state=42)
+        df = df.sample(100000, random_state=42)
         #Drop Nulls
         #Notice these columns come from reading the documentation at:
         #http://help.sentiment140.com/for-students

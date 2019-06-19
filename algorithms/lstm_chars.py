@@ -8,12 +8,21 @@ def lstm_chars(input_shape: Tuple[int, ...], output_shape: Tuple[int, ...], drop
     num_classes = output_shape[0]
 
     inputs = Input(input_shape)
-    charsEmbeddings = Embedding(193, output_dim=4)(inputs)
-    #words = Lambda(lambda x: tf.expand_dims(x, -1))(charsEmbeddings)
-    X = CuDNNLSTM(121, return_sequences=False, go_backwards=True)(charsEmbeddings)
-    X = Dropout(dropout)(X)
-    #X = Dense(30, activation='relu')(X)
-    #X = Dropout(dropout)(X)
-    output = Dense(num_classes, activation='softmax')(X)
+    #8700 as it is 29 words x 300 the dimension of the embeddings
+    chars = Lambda(lambda x: x[:,:240])(inputs)
+    chars = Embedding(600, output_dim=4)(chars)
+    chars = Bidirectional(CuDNNLSTM(4, return_sequences=False))(chars)
+    chars = Lambda(lambda x: tf.expand_dims(x, -1))(chars)
+#    chars = Dropout(dropout)(chars)
+    chars = Bidirectional(CuDNNLSTM(4, return_sequences=True))(chars)
+#    chars = Dropout(dropout)(chars)
+    chars = Bidirectional(CuDNNLSTM(4, return_sequences=True))(chars)
+#    chars = Dropout(dropout)(chars)
+    chars = Bidirectional(CuDNNLSTM(4, return_sequences=True))(chars)
+#    chars = Dropout(dropout)(chars)
+    chars = Bidirectional(CuDNNLSTM(4, return_sequences=True))(chars)
+    chars = Flatten()(chars)
+    X = Dropout(dropout)(chars)
+    output = Dense(num_classes, activation='sigmoid')(X)
 
     return Model(inputs=inputs, outputs=output)
