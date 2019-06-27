@@ -3,6 +3,259 @@
   "experiments": [{
       "dataset": "Sentiment140CharacterLevelSmall",
       "model": "Sentiment140Model",
+      "algorithm": "lstm_cnn_chars",
+      "algorithm_args": {
+        "dropout": 0.75
+      },
+      "train_args": {
+        "epochs": 50,
+        "lr": 0.001,
+        "beta_1": 0.999
+      },
+      "gpu_ind": 1
+    },
+    {
+      "dataset": "Sentiment140CharacterLevelSmall",
+      "model": "Sentiment140Model",
+      "algorithm": "lstm_cnn_chars",
+      "algorithm_args": {
+        "dropout": 0.5
+      },
+      "train_args": {
+        "epochs": 50,
+        "lr": 0.01,
+        "beta_1": 0.999
+      },
+      "gpu_ind": 1
+    },
+    {
+      "dataset": "Sentiment140CharacterLevelSmall",
+      "model": "Sentiment140Model",
+      "algorithm": "lstm_cnn_chars",
+      "algorithm_args": {
+        "dropout": 0.75
+      },
+      "train_args": {
+        "epochs": 50,
+        "lr": 0.1,
+        "beta_1": 0.999
+      },
+      "gpu_ind": 1
+    },
+    {
+      "dataset": "Sentiment140CharacterLevelSmall",
+      "model": "Sentiment140Model",
+      "algorithm": "lstm_cnn_chars",
+      "algorithm_args": {
+        "dropout": 0
+      },
+      "train_args": {
+        "epochs": 50,
+        "lr": 0.001,
+        "beta_1": 0.9
+      },
+      "gpu_ind": 1
+    },
+    {
+      "dataset": "Sentiment140CharacterLevelSmall",
+      "model": "Sentiment140Model",
+      "algorithm": "lstm_cnn_chars",
+      "algorithm_args": {
+        "dropout": 0.25
+      },
+      "train_args": {
+        "epochs": 50,
+        "lr": 0.1,
+        "beta_1": 0.9
+      },
+      "gpu_ind": 1
+    },
+    {
+      "dataset": "Sentiment140CharacterLevelSmall",
+      "model": "Sentiment140Model",
+      "algorithm": "lstm_cnn_chars",
+      "algorithm_args": {
+        "dropout": 0.25
+      },
+      "train_args": {
+        "epochs": 50,
+        "lr": 0.01,
+        "beta_1": 0.99
+      },
+      "gpu_ind": 1
+    },
+    {
+      "dataset": "Sentiment140CharacterLevelSmall",
+      "model": "Sentiment140Model",
+      "algorithm": "lstm_cnn_chars",
+      "algorithm_args": {
+        "dropout": 0
+      },
+      "train_args": {
+        "epochs": 50,
+        "lr": 0.0001,
+        "beta_1": 0.999
+      },
+      "gpu_ind": 1
+    },
+    {
+      "dataset": "Sentiment140CharacterLevelSmall",
+      "model": "Sentiment140Model",
+      "algorithm": "lstm_cnn_chars",
+      "algorithm_args": {
+        "dropout": 0.75
+      },
+      "train_args": {
+        "epochs": 50,
+        "lr": 0.0001,
+        "beta_1": 0.99
+      },
+      "gpu_ind": 1
+    },
+    {
+      "dataset": "Sentiment140CharacterLevelSmall",
+      "model": "Sentiment140Model",
+      "algorithm": "lstm_cnn_chars",
+      "algorithm_args": {
+        "dropout": 0.5
+      },
+      "train_args": {
+        "epochs": 50,
+        "lr": 0.001,
+        "beta_1": 0.999
+      },
+      "gpu_ind": 1
+    },
+    {
+      "dataset": "Sentiment140CharacterLevelSmall",
+      "model": "Sentiment140Model",
+      "algorithm": "lstm_cnn_chars",
+      "algorithm_args": {
+        "dropout": 0
+      },
+      "train_args": {
+        "epochs": 50,
+        "lr": 0.01,
+        "beta_1": 0.999
+      },
+      "gpu_ind": 1
+    },
+    {
+      "dataset": "Sentiment140CharacterLevelSmall",
+      "model": "Sentiment140Model",
+      "algorithm": "lstm_cnn_chars",
+      "algorithm_args": {
+        "dropout": 0.5
+      },
+      "train_args": {
+        "epochs": 50,
+        "lr": 0.1,
+        "beta_1": 0.999
+      },
+      "gpu_ind": 1
+    },
+    {
+      "dataset": "Sentiment140CharacterLevelSmall",
+      "model": "Sentiment140Model",
+      "algorithm": "lstm_cnn_chars",
+      "algorithm_args": {
+        "dropout": 0.5
+      },
+      "train_args": {
+        "epochs": 50,
+        "lr": 0.001,
+        "beta_1": 0.9
+      },
+      "gpu_ind": 1
+    },
+    {
+      "dataset": "Sentiment140CharacterLevelSmall",
+      "model": "Sentiment140Model",
+      "algorithm": "lstm_cnn_chars",
+      "algorithm_args": {
+        "dropout": 0
+      },
+      "train_args": {
+        "epochs": 50,
+        "lr": 0.1,
+        "beta_1": 0.9
+      },
+      "gpu_ind": 1
+    },
+    {
+      "dataset": "Sentiment140CharacterLevelSmall",
+      "model": "Sentiment140Model",
+      "algorithm": "lstm_cnn_chars",
+      "algorithm_args": {
+        "dropout": 0.5
+      },
+      "train_args": {
+        "epochs": 50,
+        "lr": 0.01,
+        "beta_1": 0.99
+      },
+      "gpu_ind": 1
+    },
+    {
+      "dataset": "Sentiment140CharacterLevelSmall",
+      "model": "Sentiment140Model",
+      "algorithm": "lstm_cnn_chars",
+      "algorithm_args": {
+        "dropout": 0.25
+      },
+      "train_args": {
+        "epochs": 50,
+        "lr": 0.0001,
+        "beta_1": 0.999
+      },
+      "gpu_ind": 1
+    },
+    {
+      "dataset": "Sentiment140CharacterLevelSmall",
+      "model": "Sentiment140Model",
+      "algorithm": "lstm_cnn_chars",
+      "algorithm_args": {
+        "dropout": 0
+      },
+      "train_args": {
+        "epochs": 50,
+        "lr": 0.0001,
+        "beta_1": 0.99
+      },
+      "gpu_ind": 1
+    },
+    {
+      "dataset": "Sentiment140CharacterLevelSmall",
+      "model": "Sentiment140Model",
+      "algorithm": "lstm_cnn_chars",
+      "algorithm_args": {
+        "dropout": 0.5
+      },
+      "train_args": {
+        "epochs": 50,
+        "lr": 0.01,
+        "beta_1": 0.9
+      },
+      "gpu_ind": 1
+    },
+    {
+      "dataset": "Sentiment140CharacterLevelSmall",
+      "model": "Sentiment140Model",
+      "algorithm": "lstm_cnn_chars",
+      "algorithm_args": {
+        "dropout": 0.75
+      },
+      "train_args": {
+        "epochs": 50,
+        "lr": 0.01,
+        "beta_1": 0.9
+      },
+      "gpu_ind": 1
+    },
+
+    {
+      "dataset": "Sentiment140CharacterLevelSmall",
+      "model": "Sentiment140Model",
       "algorithm": "lstm_chars",
       "algorithm_args": {
         "dropout": 0.75
@@ -233,258 +486,6 @@
         "lr": 0.01,
         "beta_1": 0.9
       }
-    },
-    [{
-        "dataset": "Sentiment140CharacterLevelSmall",
-        "model": "Sentiment140Model",
-        "algorithm": "lstm_chars_simple",
-        "algorithm_args": {
-          "dropout": 0.75
-        },
-        "train_args": {
-          "epochs": 50,
-          "lr": 0.001,
-          "beta_1": 0.999
-        },
-        "gpu_ind": 1
-      },
-      {
-        "dataset": "Sentiment140CharacterLevelSmall",
-        "model": "Sentiment140Model",
-        "algorithm": "lstm_chars_simple",
-        "algorithm_args": {
-          "dropout": 0.5
-        },
-        "train_args": {
-          "epochs": 50,
-          "lr": 0.01,
-          "beta_1": 0.999
-        },
-        "gpu_ind": 1
-      },
-      {
-        "dataset": "Sentiment140CharacterLevelSmall",
-        "model": "Sentiment140Model",
-        "algorithm": "lstm_chars_simple",
-        "algorithm_args": {
-          "dropout": 0.75
-        },
-        "train_args": {
-          "epochs": 50,
-          "lr": 0.1,
-          "beta_1": 0.999
-        },
-        "gpu_ind": 1
-      },
-      {
-        "dataset": "Sentiment140CharacterLevelSmall",
-        "model": "Sentiment140Model",
-        "algorithm": "lstm_chars_simple",
-        "algorithm_args": {
-          "dropout": 0
-        },
-        "train_args": {
-          "epochs": 50,
-          "lr": 0.001,
-          "beta_1": 0.9
-        },
-        "gpu_ind": 1
-      },
-      {
-        "dataset": "Sentiment140CharacterLevelSmall",
-        "model": "Sentiment140Model",
-        "algorithm": "lstm_chars_simple",
-        "algorithm_args": {
-          "dropout": 0.25
-        },
-        "train_args": {
-          "epochs": 50,
-          "lr": 0.1,
-          "beta_1": 0.9
-        },
-        "gpu_ind": 1
-      },
-      {
-        "dataset": "Sentiment140CharacterLevelSmall",
-        "model": "Sentiment140Model",
-        "algorithm": "lstm_chars_simple",
-        "algorithm_args": {
-          "dropout": 0.25
-        },
-        "train_args": {
-          "epochs": 50,
-          "lr": 0.01,
-          "beta_1": 0.99
-        },
-        "gpu_ind": 1
-      },
-      {
-        "dataset": "Sentiment140CharacterLevelSmall",
-        "model": "Sentiment140Model",
-        "algorithm": "lstm_chars_simple",
-        "algorithm_args": {
-          "dropout": 0
-        },
-        "train_args": {
-          "epochs": 50,
-          "lr": 0.0001,
-          "beta_1": 0.999
-        },
-        "gpu_ind": 1
-      },
-      {
-        "dataset": "Sentiment140CharacterLevelSmall",
-        "model": "Sentiment140Model",
-        "algorithm": "lstm_chars_simple",
-        "algorithm_args": {
-          "dropout": 0.75
-        },
-        "train_args": {
-          "epochs": 50,
-          "lr": 0.0001,
-          "beta_1": 0.99
-        },
-        "gpu_ind": 1
-      },
-      {
-        "dataset": "Sentiment140CharacterLevelSmall",
-        "model": "Sentiment140Model",
-        "algorithm": "lstm_chars_simple",
-        "algorithm_args": {
-          "dropout": 0.5
-        },
-        "train_args": {
-          "epochs": 50,
-          "lr": 0.001,
-          "beta_1": 0.999
-        },
-        "gpu_ind": 1
-      },
-      {
-        "dataset": "Sentiment140CharacterLevelSmall",
-        "model": "Sentiment140Model",
-        "algorithm": "lstm_chars_simple",
-        "algorithm_args": {
-          "dropout": 0
-        },
-        "train_args": {
-          "epochs": 50,
-          "lr": 0.01,
-          "beta_1": 0.999
-        },
-        "gpu_ind": 1
-      },
-      {
-        "dataset": "Sentiment140CharacterLevelSmall",
-        "model": "Sentiment140Model",
-        "algorithm": "lstm_chars_simple",
-        "algorithm_args": {
-          "dropout": 0.5
-        },
-        "train_args": {
-          "epochs": 50,
-          "lr": 0.1,
-          "beta_1": 0.999
-        },
-        "gpu_ind": 1
-      },
-      {
-        "dataset": "Sentiment140CharacterLevelSmall",
-        "model": "Sentiment140Model",
-        "algorithm": "lstm_chars_simple",
-        "algorithm_args": {
-          "dropout": 0.5
-        },
-        "train_args": {
-          "epochs": 50,
-          "lr": 0.001,
-          "beta_1": 0.9
-        },
-        "gpu_ind": 1
-      },
-      {
-        "dataset": "Sentiment140CharacterLevelSmall",
-        "model": "Sentiment140Model",
-        "algorithm": "lstm_chars_simple",
-        "algorithm_args": {
-          "dropout": 0
-        },
-        "train_args": {
-          "epochs": 50,
-          "lr": 0.1,
-          "beta_1": 0.9
-        },
-        "gpu_ind": 1
-      },
-      {
-        "dataset": "Sentiment140CharacterLevelSmall",
-        "model": "Sentiment140Model",
-        "algorithm": "lstm_chars_simple",
-        "algorithm_args": {
-          "dropout": 0.5
-        },
-        "train_args": {
-          "epochs": 50,
-          "lr": 0.01,
-          "beta_1": 0.99
-        },
-        "gpu_ind": 1
-      },
-      {
-        "dataset": "Sentiment140CharacterLevelSmall",
-        "model": "Sentiment140Model",
-        "algorithm": "lstm_chars_simple",
-        "algorithm_args": {
-          "dropout": 0.25
-        },
-        "train_args": {
-          "epochs": 50,
-          "lr": 0.0001,
-          "beta_1": 0.999
-        },
-        "gpu_ind": 1
-      },
-      {
-        "dataset": "Sentiment140CharacterLevelSmall",
-        "model": "Sentiment140Model",
-        "algorithm": "lstm_chars_simple",
-        "algorithm_args": {
-          "dropout": 0
-        },
-        "train_args": {
-          "epochs": 50,
-          "lr": 0.0001,
-          "beta_1": 0.99
-        },
-        "gpu_ind": 1
-      },
-      {
-        "dataset": "Sentiment140CharacterLevelSmall",
-        "model": "Sentiment140Model",
-        "algorithm": "lstm_chars_simple",
-        "algorithm_args": {
-          "dropout": 0.5
-        },
-        "train_args": {
-          "epochs": 50,
-          "lr": 0.01,
-          "beta_1": 0.9
-        },
-        "gpu_ind": 1
-      },
-      {
-        "dataset": "Sentiment140CharacterLevelSmall",
-        "model": "Sentiment140Model",
-        "algorithm": "lstm_chars_simple",
-        "algorithm_args": {
-          "dropout": 0.75
-        },
-        "train_args": {
-          "epochs": 50,
-          "lr": 0.01,
-          "beta_1": 0.9
-        },
-        "gpu_ind": 1
-      }
-    ]
-  }
+    }
+  ]
+}
