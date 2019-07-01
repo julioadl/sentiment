@@ -1,4 +1,4 @@
-from typing import Callable, Dict
+from typing import Callable, Dict, Optional
 import pathlib
 from boltons.cacheutils import cachedproperty
 
@@ -6,7 +6,7 @@ import numpy as np
 from sklearn import metrics
 from sklearn.externals import joblib
 from tensorflow.keras.models import Model as KerasModel
-from tensorflow.keras.optimizers import RMSprop
+from tensorflow.keras.optimizers import RMSprop, Adam
 
 from datasets.sequence import DatasetSequence
 
@@ -107,9 +107,9 @@ class ModelTf:
         DIRNAME.mkdir(parents=True, exist_ok=True)
         return str(DIRNAME / f'{self.name}_weights.h5')
 
-    def fit(self, dataset, batch_size=32, epochs=10, callbacks=[]):
-        self.algorithm.compile(loss=self.loss(), optimizer=self.optimizer(), metrics=self.metrics())
+    def fit(self, dataset, batch_size=32, epochs=10, callbacks=[], lr: Optional[float]=0.001, beta_1: Optional[float]=0.9, beta_2: Optional[float]=0.999, epsilon=None, decay=0.0):
 
+        self.algorithm.compile(loss=self.loss(), optimizer=self.adam_optimizer(lr=lr, beta_1=beta_1, beta_2=beta_2, epsilon=epsilon, decay=decay), metrics=self.metrics())
         train_sequence = DatasetSequence(dataset.x_train, dataset.y_train, batch_size, augment_fn=self.batch_augment_fn, format_fn=self.batch_format_fn)
         test_sequence = DatasetSequence(dataset.x_test, dataset.y_test, batch_size, augment_fn=self.batch_augment_fn, format_fn=self.batch_format_fn)
 
@@ -131,8 +131,8 @@ class ModelTf:
     def loss(self):
         return 'categorical_crossentropy'
 
-    def optimizer(self):
-        return RMSprop()
+    def adam_optimizer(self, lr: Optional[float]=0.001, beta_1: Optional[float]=0.9, beta_2: Optional[float]=0.999, epsilon=None, decay=0.0):
+        return Adam(lr=lr, beta_1=beta_1, beta_2=beta_2, epsilon=epsilon, decay=decay)
 
     def metrics(self):
         return ['accuracy']

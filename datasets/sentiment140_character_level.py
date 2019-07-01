@@ -18,6 +18,8 @@ from sklearn import preprocessing
 from sklearn.externals import joblib
 from tensorflow.keras.utils import to_categorical
 from collections import Counter
+from imblearn.over_sampling import RandomOverSampler
+from imblearn.under_sampling import RandomUnderSampler
 
 from .base import Dataset
 from utils.preprocess_tokenize_by_char import vectorizer

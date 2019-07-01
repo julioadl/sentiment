@@ -2,7 +2,7 @@ from time import time
 from typing import Callable, Optional, Union, Tuple
 
 import numpy as np
-from tensorflow.keras.callbacks import EarlyStopping, TensorBoard
+from tensorflow.keras.callbacks import EarlyStopping, TensorBoard, LambdaCallback
 from tensorflow.keras.optimizers import RMSprop
 #Try to use wandb
 import wandb
@@ -12,10 +12,14 @@ from datasets.base import Dataset
 #from models.base import Model
 from .gpu_util_sampler import GPUUtilizationSampler
 
+
 EARLY_STOPPING = False
 GPU_UTIL_SAMPLE = True
 
-def train_model(model, dataset: Dataset, epochs: Optional[int] = None, batch_size: Optional[int] = None, gpu_ind: Optional[int] = None, use_wandb = False):
+def train_model(model, dataset: Dataset, epochs: Optional[int] = None, batch_size: Optional[int] = None,
+                gpu_ind: Optional[int] = None, use_wandb = False, lr: Optional[float]=0.001, beta_1: Optional[float]=0.9,
+                beta_2: Optional[float]=0.999, epsilon=None, decay=0.0):
+
     callbacks = []
 
 #   Early stopping with tensorflow
@@ -33,7 +37,7 @@ def train_model(model, dataset: Dataset, epochs: Optional[int] = None, batch_siz
 
     t = time()
     #Train Neural Network. Originally:
-    history = model.fit(dataset, batch_size, epochs, callbacks)
+    history = model.fit(dataset, batch_size, epochs, callbacks, lr=lr, beta_1=beta_1, beta_2=beta_2, epsilon=epsilon, decay=decay)
     '''
     See line 41 of https://github.com/gradescope/fsdl-text-recognizer-project/blob/master/lab6_sln/training/util.py
     '''
