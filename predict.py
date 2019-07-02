@@ -34,9 +34,9 @@ class predictor:
             print(generated)
 
             for i in range(120):
-                x_pred = np.zeros((1, maxlen, len(char_index.keys())))
+                x_pred = np.zeros((1, maxlen))
                 for t, char in enumerate(sentence):
-                    x_pred[0, t, char_index[char]] = 1.
+                    x_pred[0, t] = char_index[char]
 
                 preds, _, probas = self.model.predict(x_pred)
                 next_index = self.sample(probas, diversity)

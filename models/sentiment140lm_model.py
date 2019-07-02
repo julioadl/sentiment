@@ -6,12 +6,12 @@ from tensorflow.keras.models import load_model
 
 from .base import ModelTf as Model
 from datasets.sentiment140_character_level_lm import Sentiment140CharacterLevelLM
-from algorithms.lstm_chars_simple import lstm_chars_simple
+from algorithms.lstm_chars import lstm_chars
 
 DIRNAME = pathlib.Path('__file__').parents[0].resolve() / 'weights'
 
 class Sentiment140LMModel(Model):
-    def __init__(self, dataset_cls: type=Sentiment140CharacterLevelLM, algorithm_fn: Callable=lstm_chars_simple, dataset_args: Dict=None, algorithm_args: Dict=None):
+    def __init__(self, dataset_cls: type=Sentiment140CharacterLevelLM, algorithm_fn: Callable=lstm_chars, dataset_args: Dict=None, algorithm_args: Dict=None):
         super().__init__(dataset_cls, algorithm_fn, dataset_args, algorithm_args)
 
     def load_features(self):

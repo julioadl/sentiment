@@ -1,7 +1,7 @@
 from typing import Optional, Tuple, Dict
 
 import tensorflow as tf
-from tensorflow.keras.layers import Reshape, Dense, Dropout, Flatten, Embedding, Conv1D, MaxPooling1D, Lambda, LSTM, GRU, CuDNNLSTM, Bidirectional, Input, Concatenate, GlobalMaxPooling1D
+from tensorflow.keras.layers import Reshape, Dense, Dropout, Flatten, Embedding, Conv1D, MaxPooling1D, Lambda, LSTM, GRU, CuDNNLSTM, Bidirectional, Input, Concatenate, GlobalMaxPooling1D, BatchNormalization
 from tensorflow.keras.models import Model, Sequential
 
 def lstm_cnn_chars(input_shape: Tuple[int, ...], output_shape: Tuple[int, ...], dropout: float=0.2)-> Model:
@@ -10,7 +10,7 @@ def lstm_cnn_chars(input_shape: Tuple[int, ...], output_shape: Tuple[int, ...], 
     inputs = Input(input_shape)
     #8700 as it is 29 words x 300 the dimension of the embeddings
 #    charsInputs = Lambda(lambda x: x[:,:240])(inputs)
-    charsEmbeddings = Embedding(193, output_dim=4)(inputs)
+    charsEmbeddings = Embedding(132, output_dim=4)(inputs)
     chars1 = Conv1D(3, kernel_size=2, activation='tanh', input_shape=input_shape, kernel_initializer='glorot_normal')(charsEmbeddings)
     chars1 = Flatten()(chars1)
     chars2 = Conv1D(4, kernel_size=3, activation='tanh', input_shape=input_shape, kernel_initializer='glorot_normal')(charsEmbeddings)

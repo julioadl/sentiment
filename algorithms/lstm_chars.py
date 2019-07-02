@@ -11,7 +11,7 @@ def lstm_chars(input_shape: Tuple[int, ...], output_shape: Tuple[int, ...], drop
     inputs = Input(input_shape)
     #8700 as it is 29 words x 300 the dimension of the embeddings
     #chars = Lambda(lambda x: x[:,:240])(inputs)
-    chars = Embedding(134, output_dim=4)(inputs)
+    chars = Embedding(132, output_dim=4)(inputs)
     chars = Bidirectional(CuDNNLSTM(121, return_sequences=False))(chars)
     chars = Lambda(lambda x: tf.expand_dims(x, -1))(chars)
     #chars = BatchNormalization()(chars)
