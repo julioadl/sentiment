@@ -24,7 +24,7 @@ from collections import Counter
 from sklearn.model_selection import train_test_split
 
 from .base import Dataset
-from utils.preprocess_tokenize_by_char import vectorizer
+#from utils.preprocess_tokenize_by_char import vectorizer
 
 #ADD URL
 #http://help.sentiment140.com/for-students
@@ -110,8 +110,8 @@ def _process_data():
         indices_char = dict((i, c) for i, c in enumerate(chars))
 
         #Generate sequences to be learnt by LSTM
-        maxlen = 40
-        step = 3
+        maxlen = 140
+        step = 5
         sentences = []
         next_chars = []
         for i in range(0, len(string) - maxlen, step):
@@ -121,11 +121,11 @@ def _process_data():
         print('nb sequences:', len(sentences))
 
         #vectorize
-        X = np.zeros((len(sentences), maxlen, len(chars)), dtype=np.bool)
-        y = np.zeros((len(sentences), len(chars)), dtype=np.bool)
+        X = np.zeros((len(sentences), maxlen))
+        y = np.zeros((len(sentences), len(chars)))
         for i, sentence in enumerate(sentences):
             for t, char in enumerate(sentence):
-                X[i, t, char_indices[char]] = 1
+                X[i, t] = char_indices[char]
                 y[i, char_indices[next_chars[i]]] = 1
 
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)

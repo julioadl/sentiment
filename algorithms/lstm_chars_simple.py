@@ -8,9 +8,9 @@ def lstm_chars_simple(input_shape: Tuple[int, ...], output_shape: Tuple[int, ...
     num_classes = output_shape[0]
 
     inputs = Input(input_shape)
-    #charsEmbeddings = Embedding(155, output_dim=4)(inputs)
+    charsEmbeddings = Embedding(134, output_dim=4)(inputs)
     #words = Lambda(lambda x: tf.expand_dims(x, -1))(charsEmbeddings)
-    X = CuDNNLSTM(121, return_sequences=False, go_backwards=True)(inputs)
+    X = CuDNNLSTM(121, return_sequences=False, go_backwards=True)(charsEmbeddings)
     X = Dropout(dropout)(X)
     #X = Dense(30, activation='relu')(X)
     #X = Dropout(dropout)(X)
