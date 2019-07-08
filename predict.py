@@ -1,4 +1,4 @@
-from typing import List, Tuple, Union
+from typing import List, Tuple, Union, Optional
 
 import numpy as np
 import random
@@ -23,17 +23,17 @@ class predictor:
         self.model.load_weights()
         #self.features = self.model.load_features()
 
-    def predict(self, maxlen: int) -> str:
+    def predict(self, text: str, maxlen: Optional[int] = 40) -> str:
         start_index = random.randint(0, len(text) - maxlen - 1)
-        for diversity in [0.2, 0.5, 1.0, 1.2]:
+        for diversity in [0.2, 0.3, 0.4, 0.5]:
             print('----- diversity:', diversity)
             generated = ''
-            sentence = text[start_index: start_index + maxlen]
+            sentence = '≤' + text[:39]
             generated += sentence
             print('----- Generating with seed: "' + sentence + '"')
-            print(generated)
+            #print(generated)
 
-            for i in range(120):
+            for i in range(140):
                 x_pred = np.zeros((1, maxlen))
                 for t, char in enumerate(sentence):
                     x_pred[0, t] = char_index[char]

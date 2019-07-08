@@ -17,6 +17,7 @@ from boltons.cacheutils import cachedproperty
 import h5py
 import numpy as np
 import pandas as pd
+import random
 from sklearn import preprocessing
 from sklearn.externals import joblib
 from tensorflow.keras.utils import to_categorical
@@ -83,7 +84,7 @@ def _process_data():
         df = df.dropna()
         df.columns = ['polarity', 'id', 'date', 'query', 'user_screen_name', 'text']
         df = df.drop(columns=['id', 'date', 'query', 'user_screen_name'])
-        df = df.sample(10000, random_state=42)
+        #df = df.sample(100000, random_state=42)
         #Drop Nulls
         #Notice these columns come from reading the documentation at:
         #http://help.sentiment140.com/for-students
@@ -110,16 +111,22 @@ def _process_data():
         indices_char = dict((i, c) for i, c in enumerate(chars))
 
         #Generate sequences to be learnt by LSTM
-        maxlen = 140
-        step = 5
+        #74 is the average no of character for tweets
+        maxlen = 74
+        step = 3
         sentences = []
         next_chars = []
         for i in range(0, len(string) - maxlen, step):
             sentences.append(string[i: i + maxlen])
             next_chars.append(string[i + maxlen])
 
-        print('nb sequences:', len(sentences))
+        #Generate a variety of sequences
+        random.seed(42)
+        sentences = random.sample(sentences, 5000000)
+        random.seed(42)
+        next_chars = random.sample(next_chars, 5000000)
 
+        print('nb sequences:', len(sentences))
         #vectorize
         X = np.zeros((len(sentences), maxlen))
         y = np.zeros((len(sentences), len(chars)))
