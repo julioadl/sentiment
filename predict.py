@@ -19,18 +19,17 @@ text = json.load(open(STRING_FILE))
 
 class predictor:
     def __init__(self):
-        self.model = Sentiment140LMModel()
+        self.model = Sentiment140LMModel(algorithm_args={"num_layers": 3, "hidden_units": 128, "dropout": 0})
         self.model.load_weights()
         #self.features = self.model.load_features()
 
-    def predict(self, text: str, maxlen: Optional[int] = 40) -> str:
-        start_index = random.randint(0, len(text) - maxlen - 1)
-        for diversity in [0.2, 0.3, 0.4, 0.5]:
+    def predict(self, maxlen: Optional[int] = 40) -> str:
+        for diversity in [0.3, 0.4, 0.5, 0.6]:
             print('----- diversity:', diversity)
             generated = ''
-            sentence = '≤' + text[:39]
+            sentence = ' ' * (maxlen - 2) + '≥≤'
             generated += sentence
-            print('----- Generating with seed: "' + sentence + '"')
+            #print('----- Generating with seed: "' + sentence + '"')
             #print(generated)
 
             for i in range(140):

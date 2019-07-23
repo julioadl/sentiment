@@ -122,9 +122,9 @@ def _process_data():
 
         #Generate a variety of sequences
         random.seed(42)
-        sentences = random.sample(sentences, 5000000)
+        sentences = random.sample(sentences, 2000000)
         random.seed(42)
-        next_chars = random.sample(next_chars, 5000000)
+        next_chars = random.sample(next_chars, 2000000)
 
         print('nb sequences:', len(sentences))
         #vectorize

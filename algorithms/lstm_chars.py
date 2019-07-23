@@ -6,8 +6,6 @@ from tensorflow.keras.models import Model, Sequential
 
 def lstm_chars(input_shape: Tuple[int, ...], output_shape: Tuple[int, ...], hidden_units: int=128, num_layers: int=3, dropout: float=0.2)-> Model:
     num_classes = output_shape[0]
-
-    num_classes = output_shape[0]
     inputs = Input(input_shape)
     #8700 as it is 29 words x 300 the dimension of the embeddings
     #chars = Lambda(lambda x: x[:,:240])(inputs)
